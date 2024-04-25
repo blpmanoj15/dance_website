@@ -1,0 +1,51 @@
+extends base.pug
+
+
+block scripts 
+  script(src="/static/index.js")
+
+block style 
+  style
+    include ../static/style.css
+
+block content 
+    
+
+
+
+    section#introSection 
+      div Welcome to Ojusva'Dance Academy 
+      div.small Eat Sleep Dance Repeat
+
+    section#missionSection
+        h2 Our Mission
+        div.card
+            h3 Dance Perfection
+            div.card-box
+                div.card-img
+                    img(src="/static/1.avif")
+                div.card-content
+                    p This is the best dance academy of the universe
+
+        div.card
+            h3 Dance the way you like
+            div.card-box
+                div.card-img
+                    img(src="/static/2.avif")
+                div.card-content
+                    p This is the best dance academy of the universe
+
+        div.card
+            h3 Expert Teaching
+            div.card-box
+                div.card-img
+                    img(src="/static/3.jpeg")
+                div.card-content
+                    p This is the best dance academy of the universe   
+    section#sponsorsSection 
+      h2  Our Sponsors
+      div#sponsors
+        img(src= "/static/img/img1.jpeg", alt= 'Sponsor Image', class= 'spImage')
+        img(src= "/static/img/img2.jpeg", alt= 'Sponsor Image', class= 'spImage')
+        img(src= "/static/img/img3.jpeg", alt= 'Sponsor Image', class= 'spImage')
+        img(src= "/static/img/img4.jpeg", alt= 'Sponsor Image', class= 'spImage')
