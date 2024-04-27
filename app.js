@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 const express= require('express');
 const path= require('path');
 const fs=require('fs');
@@ -7,7 +7,7 @@ const app= express();
 var mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect('mongodb://localhost:27017/contactDance', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -52,6 +52,22 @@ app.post('/contact', (req, res)=>{
   }).catch(()=>{
   res.status(400).send("item was not saved to the databse")
 })
+});
+
+app.get('/about' ,(req,res)=>{
+        
+  const params={} ;
+  res.status(200).render("about.pug",params)
+});
+app.get('/classinfo' ,(req,res)=>{
+  
+  const params={} ;
+  res.status(200).render("classinfo.pug",params)
+});
+app.get('/services' ,(req,res)=>{
+  
+  const params={} ;
+  res.status(200).render("services.pug",params)
 });
 
 
